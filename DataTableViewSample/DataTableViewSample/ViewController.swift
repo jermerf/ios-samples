@@ -74,4 +74,5 @@ class NoteTableCell : UITableViewCell {
     imgNote.image = UIImage(systemName: unwIcon)
     lblNote.text = unwText
   }
+  
 }

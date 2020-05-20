@@ -19,7 +19,6 @@ class ImageViewController: UIViewController {
   
   @IBAction func chooseImage(_ sender: Any) {
     if UIImagePickerController.isSourceTypeAvailable(.savedPhotosAlbum){
-      print("Button capture")
       imagePicker.sourceType = .savedPhotosAlbum
       imagePicker.allowsEditing = false
       
@@ -27,6 +26,14 @@ class ImageViewController: UIViewController {
     }
   }
   
+  @IBAction func takePicture(_ sender: Any) {
+    if UIImagePickerController.isSourceTypeAvailable(.savedPhotosAlbum){
+      imagePicker.sourceType = .camera
+      imagePicker.allowsEditing = false
+      
+      present(imagePicker, animated: true, completion: nil)
+    }
+  }
   
   func getSavePath() -> URL{
     let paths = FileManager.default.urls(for: .applicationSupportDirectory, in: .userDomainMask)
@@ -56,6 +63,13 @@ class ImageViewController: UIViewController {
     }
     
   }
+  @IBAction func shareImage(_ sender: Any) {
+    if let img = imgChosen.image {
+      let items = [img]
+      let ac = UIActivityViewController(activityItems: items, applicationActivities: nil)
+      present(ac, animated: true)
+    }
+  }
   
 }
 
@@ -64,9 +78,10 @@ extension ImageViewController : UIImagePickerControllerDelegate, UINavigationCon
   func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
     let image = info[UIImagePickerController.InfoKey.originalImage] as? UIImage
     imgChosen.image =   image
+    imagePicker.dismiss(animated: true, completion: nil)
   }
   public func imagePickerControllerDidCancel(_ picker: UIImagePickerController) {
-    print("cancelled")
+    imagePicker.dismiss(animated: true, completion: nil)
   }
 
 }

@@ -32,6 +32,8 @@ public class Note: NSManagedObject {
   }
   
   func save() {
-    DataManager.saveContext()
+    if !DataManager.saveContext() {
+      
+    }
   }
 }

@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16096" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16096" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="FtJ-Kw-dOa">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
@@ -226,29 +226,50 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YUx-3g-zml">
-                                <rect key="frame" x="191" y="320" width="32" height="30"/>
+                                <rect key="frame" x="191" y="358" width="32" height="30"/>
                                 <state key="normal" title="save"/>
                                 <connections>
                                     <action selector="saveImage:" destination="FtJ-Kw-dOa" eventType="touchUpInside" id="pQZ-6o-T9A"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3y1-Mn-pMU">
-                                <rect key="frame" x="192" y="358" width="30" height="30"/>
+                                <rect key="frame" x="192" y="396" width="30" height="30"/>
                                 <state key="normal" title="load"/>
                                 <connections>
                                     <action selector="loadImage:" destination="FtJ-Kw-dOa" eventType="touchUpInside" id="4aJ-Gk-d2x"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7LD-ae-hs1">
+                                <rect key="frame" x="187" y="434" width="40" height="30"/>
+                                <state key="normal" title="Share"/>
+                                <connections>
+                                    <action selector="shareImage:" destination="FtJ-Kw-dOa" eventType="touchUpInside" id="HSk-1z-XS3"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3eH-1r-CDx">
+                                <rect key="frame" x="164.5" y="320" width="85" height="30"/>
+                                <state key="normal" title="Take Picture"/>
+                                <connections>
+                                    <action selector="takePicture:" destination="FtJ-Kw-dOa" eventType="touchUpInside" id="FFA-fS-N1K"/>
                                 </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
                             <constraint firstItem="3y1-Mn-pMU" firstAttribute="top" secondItem="YUx-3g-zml" secondAttribute="bottom" constant="8" id="0nD-10-bM7"/>
+                            <constraint firstItem="YUx-3g-zml" firstAttribute="top" secondItem="3eH-1r-CDx" secondAttribute="bottom" constant="8" id="6xK-IC-0vh"/>
                             <constraint firstItem="Hvl-HV-dZE" firstAttribute="top" secondItem="05F-oY-mYf" secondAttribute="top" id="D6W-L5-vjS"/>
+                            <constraint firstItem="3y1-Mn-pMU" firstAttribute="centerX" secondItem="Lsm-Mp-b3L" secondAttribute="centerX" id="L3F-wC-T9N"/>
                             <constraint firstItem="Hvl-HV-dZE" firstAttribute="leading" secondItem="05F-oY-mYf" secondAttribute="leading" constant="20" id="MVJ-eD-zwM"/>
                             <constraint firstItem="05F-oY-mYf" firstAttribute="trailing" secondItem="Hvl-HV-dZE" secondAttribute="trailing" constant="20" id="N4M-qm-qS1"/>
                             <constraint firstItem="YUx-3g-zml" firstAttribute="centerX" secondItem="Lsm-Mp-b3L" secondAttribute="centerX" id="Nz5-qU-Vik"/>
+                            <constraint firstItem="7LD-ae-hs1" firstAttribute="top" secondItem="3y1-Mn-pMU" secondAttribute="bottom" constant="8" id="RFu-UQ-vOM"/>
                             <constraint firstItem="3y1-Mn-pMU" firstAttribute="centerX" secondItem="Lsm-Mp-b3L" secondAttribute="centerX" id="TvU-rz-wSk"/>
-                            <constraint firstItem="YUx-3g-zml" firstAttribute="top" secondItem="VM6-I4-fvc" secondAttribute="bottom" constant="8" id="fOL-XV-llv"/>
+                            <constraint firstItem="VM6-I4-fvc" firstAttribute="centerX" secondItem="Lsm-Mp-b3L" secondAttribute="centerX" id="a5M-JX-RBg"/>
+                            <constraint firstItem="YUx-3g-zml" firstAttribute="centerX" secondItem="Lsm-Mp-b3L" secondAttribute="centerX" id="dL1-Y5-IiS"/>
+                            <constraint firstItem="3eH-1r-CDx" firstAttribute="top" secondItem="VM6-I4-fvc" secondAttribute="bottom" constant="8" id="fok-fb-k8K"/>
+                            <constraint firstItem="3eH-1r-CDx" firstAttribute="centerX" secondItem="Lsm-Mp-b3L" secondAttribute="centerX" id="j3o-Sm-4F8"/>
+                            <constraint firstItem="7LD-ae-hs1" firstAttribute="centerX" secondItem="Lsm-Mp-b3L" secondAttribute="centerX" id="oVz-gO-csr"/>
                             <constraint firstItem="VM6-I4-fvc" firstAttribute="centerX" secondItem="Lsm-Mp-b3L" secondAttribute="centerX" id="qdU-dG-mOD"/>
                             <constraint firstItem="VM6-I4-fvc" firstAttribute="top" secondItem="Hvl-HV-dZE" secondAttribute="bottom" constant="8" id="tiQ-Qm-rZi"/>
                         </constraints>
@@ -415,7 +436,7 @@
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="qiZ-ls-7PI">
                                         <rect key="frame" x="8" y="8" width="358" height="1400"/>
                                         <subviews>
-                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" image="doc.append" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="ui2-wI-B94">
+                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="doc.append" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="ui2-wI-B94">
                                                 <rect key="frame" x="79" y="42" width="200" height="200"/>
                                                 <color key="tintColor" systemColor="systemYellowColor" red="1" green="0.80000000000000004" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <constraints>
@@ -424,7 +445,7 @@
                                                     <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="200" id="yWR-ct-oeQ"/>
                                                 </constraints>
                                             </imageView>
-                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" image="moon.stars" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="hwz-B9-ql8">
+                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="moon.stars" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="hwz-B9-ql8">
                                                 <rect key="frame" x="79" y="374" width="200" height="199.5"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="200" id="610-7z-ypU"/>
@@ -433,7 +454,7 @@
                                                     <constraint firstAttribute="width" constant="200" id="yTG-5T-TcZ"/>
                                                 </constraints>
                                             </imageView>
-                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" image="speaker.zzz" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="t5r-sd-wfC">
+                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="speaker.zzz" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="t5r-sd-wfC">
                                                 <rect key="frame" x="79" y="741" width="200" height="197.5"/>
                                                 <color key="tintColor" systemColor="systemGreenColor" red="0.20392156859999999" green="0.78039215689999997" blue="0.34901960780000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <constraints>
@@ -443,7 +464,7 @@
                                                     <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="200" id="yvM-6q-FE1"/>
                                                 </constraints>
                                             </imageView>
-                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" image="bolt.circle" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="Jpf-iL-bVH">
+                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="bolt.circle" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="Jpf-iL-bVH">
                                                 <rect key="frame" x="79" y="1062" width="200" height="200"/>
                                                 <color key="tintColor" systemColor="systemPinkColor" red="1" green="0.1764705882" blue="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <constraints>
@@ -456,7 +477,15 @@
                                         </subviews>
                                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                         <constraints>
+                                            <constraint firstItem="ui2-wI-B94" firstAttribute="centerX" secondItem="qiZ-ls-7PI" secondAttribute="centerX" id="4PN-cA-EVa"/>
+                                            <constraint firstItem="hwz-B9-ql8" firstAttribute="top" secondItem="ui2-wI-B94" secondAttribute="bottom" constant="133" id="4gF-dD-SPh"/>
+                                            <constraint firstItem="Jpf-iL-bVH" firstAttribute="centerX" secondItem="qiZ-ls-7PI" secondAttribute="centerX" id="8ae-pO-GL3"/>
+                                            <constraint firstItem="t5r-sd-wfC" firstAttribute="centerX" secondItem="qiZ-ls-7PI" secondAttribute="centerX" id="NLB-FI-r1T"/>
                                             <constraint firstAttribute="height" constant="1400" id="Umy-xc-o1V"/>
+                                            <constraint firstItem="hwz-B9-ql8" firstAttribute="centerX" secondItem="qiZ-ls-7PI" secondAttribute="centerX" id="buA-Uz-yaz"/>
+                                            <constraint firstItem="ui2-wI-B94" firstAttribute="top" secondItem="qiZ-ls-7PI" secondAttribute="top" constant="42" id="dBl-dm-HAP"/>
+                                            <constraint firstItem="Jpf-iL-bVH" firstAttribute="top" secondItem="t5r-sd-wfC" secondAttribute="bottom" constant="121.5" id="fLJ-98-753"/>
+                                            <constraint firstItem="t5r-sd-wfC" firstAttribute="top" secondItem="hwz-B9-ql8" secondAttribute="bottom" constant="165" id="kBr-L0-ZGC"/>
                                         </constraints>
                                     </view>
                                 </subviews>
