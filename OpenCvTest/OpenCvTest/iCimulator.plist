@@ -1,0 +1,4 @@
+{
+	Type = "Mac-Camera";
+	Argument = "/Users/jermaine/iCimulator/Example/demo-video.mov";
+}

@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		B858A377247696A8007B7781 /* iCimulator.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B858D886247551B2009A6EC4 /* iCimulator.framework */; };
 		B858D84F24754D1E009A6EC4 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B858D84E24754D1E009A6EC4 /* AppDelegate.swift */; };
 		B858D85124754D1E009A6EC4 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B858D85024754D1E009A6EC4 /* SceneDelegate.swift */; };
 		B858D85324754D1E009A6EC4 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B858D85224754D1E009A6EC4 /* ViewController.swift */; };
@@ -16,6 +17,8 @@
 		B858D85E24754D22009A6EC4 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B858D85C24754D22009A6EC4 /* LaunchScreen.storyboard */; };
 		B858D86924754D22009A6EC4 /* OpenCvTestTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B858D86824754D22009A6EC4 /* OpenCvTestTests.swift */; };
 		B858D87424754D22009A6EC4 /* OpenCvTestUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B858D87324754D22009A6EC4 /* OpenCvTestUITests.swift */; };
+		B858D8832475516F009A6EC4 /* iCimulator.swift in Sources */ = {isa = PBXBuildFile; fileRef = B858D8812475516F009A6EC4 /* iCimulator.swift */; };
+		B858D8842475516F009A6EC4 /* iCimulator.plist in Resources */ = {isa = PBXBuildFile; fileRef = B858D8822475516F009A6EC4 /* iCimulator.plist */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,6 +54,9 @@
 		B858D86F24754D22009A6EC4 /* OpenCvTestUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = OpenCvTestUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		B858D87324754D22009A6EC4 /* OpenCvTestUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OpenCvTestUITests.swift; sourceTree = "<group>"; };
 		B858D87524754D22009A6EC4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B858D8812475516F009A6EC4 /* iCimulator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = iCimulator.swift; sourceTree = "<group>"; };
+		B858D8822475516F009A6EC4 /* iCimulator.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = iCimulator.plist; sourceTree = "<group>"; };
+		B858D886247551B2009A6EC4 /* iCimulator.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = iCimulator.framework; path = ../../iCimulator/Carthage/Build/iOS/iCimulator.framework; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,6 +64,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B858A377247696A8007B7781 /* iCimulator.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -85,6 +92,7 @@
 				B858D86724754D22009A6EC4 /* OpenCvTestTests */,
 				B858D87224754D22009A6EC4 /* OpenCvTestUITests */,
 				B858D84C24754D1E009A6EC4 /* Products */,
+				B858D885247551B2009A6EC4 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -101,6 +109,8 @@
 		B858D84D24754D1E009A6EC4 /* OpenCvTest */ = {
 			isa = PBXGroup;
 			children = (
+				B858D8822475516F009A6EC4 /* iCimulator.plist */,
+				B858D8812475516F009A6EC4 /* iCimulator.swift */,
 				B858D84E24754D1E009A6EC4 /* AppDelegate.swift */,
 				B858D85024754D1E009A6EC4 /* SceneDelegate.swift */,
 				B858D85224754D1E009A6EC4 /* ViewController.swift */,
@@ -129,6 +139,14 @@
 				B858D87524754D22009A6EC4 /* Info.plist */,
 			);
 			path = OpenCvTestUITests;
+			sourceTree = "<group>";
+		};
+		B858D885247551B2009A6EC4 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				B858D886247551B2009A6EC4 /* iCimulator.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -238,6 +256,7 @@
 				B858D85E24754D22009A6EC4 /* LaunchScreen.storyboard in Resources */,
 				B858D85B24754D22009A6EC4 /* Assets.xcassets in Resources */,
 				B858D85624754D1E009A6EC4 /* Main.storyboard in Resources */,
+				B858D8842475516F009A6EC4 /* iCimulator.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -266,6 +285,7 @@
 				B858D84F24754D1E009A6EC4 /* AppDelegate.swift in Sources */,
 				B858D85924754D1E009A6EC4 /* OpenCvTest.xcdatamodeld in Sources */,
 				B858D85124754D1E009A6EC4 /* SceneDelegate.swift in Sources */,
+				B858D8832475516F009A6EC4 /* iCimulator.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -439,6 +459,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_ASSET_PATHS = OpenCvTest/iCimulator.plist;
 				INFOPLIST_FILE = OpenCvTest/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -456,6 +477,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_ASSET_PATHS = OpenCvTest/iCimulator.plist;
 				INFOPLIST_FILE = OpenCvTest/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
