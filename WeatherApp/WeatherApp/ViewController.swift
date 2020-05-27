@@ -44,11 +44,19 @@ class ViewController: UIViewController {
     guard let temp = main["temp"] as? Double else { return }
     guard let wind = json["wind"] as? [String: Any] else { return }
     guard let windSpeed = wind["speed"] as? Double else { return }
+    guard let clouds = json["clouds"] as? [String: Any] else { return }
+    guard var cloudiness = clouds["all"] as? Int else { return }
     
     DispatchQueue.main.async {
       self.lblTemp.text = "\(round(temp - 273.15)) ˚"
       self.lblWind.text = "\(round(windSpeed)) km/h"
-
+      if cloudiness < 20 {
+        self.imgWeather.image = UIImage(systemName: "sun.max.fill")
+      } else if cloudiness < 60 {
+        self.imgWeather.image = UIImage(systemName: "cloud.fill")
+      } else {
+        self.imgWeather.image = UIImage(systemName: "cloud.drizzle.fill")
+      }
     }
     
     

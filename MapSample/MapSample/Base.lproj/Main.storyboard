@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16096" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="MapSample" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="krL-PM-IpK">
+                                <rect key="frame" x="20" y="44" width="374" height="738"/>
+                            </mapView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Woo-bG-4Yz">
+                                <rect key="frame" x="165" y="832" width="84" height="30"/>
+                                <state key="normal" title="My Location"/>
+                                <connections>
+                                    <action selector="findMyLocation:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Egu-Hr-y0n"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YPa-0K-qzP">
+                                <rect key="frame" x="20" y="790" width="52" height="30"/>
+                                <state key="normal" title="Portrait"/>
+                                <connections>
+                                    <action selector="toPortrait:" destination="BYZ-38-t0r" eventType="touchUpInside" id="baV-BL-4IC"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xND-Bu-yNK">
+                                <rect key="frame" x="319" y="790" width="75" height="30"/>
+                                <state key="normal" title="Landscape"/>
+                                <connections>
+                                    <action selector="toLandscape:" destination="BYZ-38-t0r" eventType="touchUpInside" id="PJk-Sw-VX7"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="xND-Bu-yNK" secondAttribute="bottom" constant="42" id="1AV-u8-e3N"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="krL-PM-IpK" secondAttribute="trailing" constant="20" id="7LF-hK-vQL"/>
+                            <constraint firstItem="YPa-0K-qzP" firstAttribute="top" secondItem="krL-PM-IpK" secondAttribute="bottom" constant="8" id="Aj6-5X-ERm"/>
+                            <constraint firstItem="Woo-bG-4Yz" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="P7g-Uz-Gfp"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="xND-Bu-yNK" secondAttribute="trailing" constant="20" id="bh0-OS-0iU"/>
+                            <constraint firstItem="krL-PM-IpK" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="bhi-fv-eFk"/>
+                            <constraint firstItem="Woo-bG-4Yz" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="bsj-2P-gGE"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="YPa-0K-qzP" secondAttribute="bottom" constant="42" id="rl3-6z-jAN"/>
+                            <constraint firstItem="YPa-0K-qzP" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="sGG-nq-rgC"/>
+                            <constraint firstItem="krL-PM-IpK" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="wIe-QF-6tI"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <connections>
+                        <outlet property="map" destination="krL-PM-IpK" id="daL-nM-jh7"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="131.8840579710145" y="128.57142857142856"/>
+        </scene>
+    </scenes>
+</document>

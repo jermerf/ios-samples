@@ -66,7 +66,7 @@ class UserDefaultsViewController: UIViewController {
     s1.isOn = u.bool(forKey: "s1")
     s2.isOn = u.bool(forKey: "s2")
     s3.isOn = u.bool(forKey: "s3")
-    s4.isOn = u.bool(forKey: "s4")
+    s4.isOn = u.bool	`forKey: "s4")
     s5.isOn = u.bool(forKey: "s5")
   }
   
