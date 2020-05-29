@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16096" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Accelerometer" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="X" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cCs-nb-hd2">
+                                <rect key="frame" x="201" y="44" width="12" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Y" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BDk-AO-8et">
+                                <rect key="frame" x="201.5" y="73" width="11" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Z" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XtL-iU-Nv5">
+                                <rect key="frame" x="201.5" y="102" width="11" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Swipes" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="R5z-Sy-TsA">
+                                <rect key="frame" x="179.5" y="131" width="55" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Scale" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bQm-sS-UX4">
+                                <rect key="frame" x="186" y="160" width="42" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <gestureRecognizers/>
+                        <constraints>
+                            <constraint firstItem="BDk-AO-8et" firstAttribute="top" secondItem="cCs-nb-hd2" secondAttribute="bottom" constant="8" id="4j9-No-GQ5"/>
+                            <constraint firstItem="bQm-sS-UX4" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="88o-ZC-WgZ"/>
+                            <constraint firstItem="R5z-Sy-TsA" firstAttribute="top" secondItem="XtL-iU-Nv5" secondAttribute="bottom" constant="8" id="Ag7-CM-DqF"/>
+                            <constraint firstItem="cCs-nb-hd2" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="BrW-rx-DTO"/>
+                            <constraint firstItem="BDk-AO-8et" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="HJJ-ad-CdM"/>
+                            <constraint firstItem="cCs-nb-hd2" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="QOu-6L-iSB"/>
+                            <constraint firstItem="XtL-iU-Nv5" firstAttribute="top" secondItem="BDk-AO-8et" secondAttribute="bottom" constant="8" id="VNh-bO-6vi"/>
+                            <constraint firstItem="XtL-iU-Nv5" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Wsg-mz-Xft"/>
+                            <constraint firstItem="R5z-Sy-TsA" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="hIE-P4-GNz"/>
+                            <constraint firstItem="bQm-sS-UX4" firstAttribute="top" secondItem="R5z-Sy-TsA" secondAttribute="bottom" constant="8" id="klu-uR-OZy"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <connections>
+                            <outletCollection property="gestureRecognizers" destination="crM-Dm-6xi" appends="YES" id="dVQ-JT-WWK"/>
+                        </connections>
+                    </view>
+                    <connections>
+                        <outlet property="lblScale" destination="bQm-sS-UX4" id="GRX-Qc-Fm2"/>
+                        <outlet property="lblSwipes" destination="R5z-Sy-TsA" id="rYQ-DB-pGD"/>
+                        <outlet property="lblX" destination="cCs-nb-hd2" id="5l7-f2-cW0"/>
+                        <outlet property="lblY" destination="BDk-AO-8et" id="zoP-9X-Icw"/>
+                        <outlet property="lblZ" destination="XtL-iU-Nv5" id="YRx-8W-bue"/>
+                        <outlet property="pincher" destination="UWk-vq-n8B" id="EjI-ue-u1e"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+                <pinchGestureRecognizer id="UWk-vq-n8B">
+                    <connections>
+                        <action selector="pinching:" destination="BYZ-38-t0r" id="VRJ-7U-sDl"/>
+                        <outlet property="delegate" destination="BYZ-38-t0r" id="W2L-bS-yZh"/>
+                    </connections>
+                </pinchGestureRecognizer>
+                <swipeGestureRecognizer direction="right" id="crM-Dm-6xi">
+                    <connections>
+                        <action selector="swipedRight:" destination="BYZ-38-t0r" id="wFn-xA-pva"/>
+                    </connections>
+                </swipeGestureRecognizer>
+            </objects>
+            <point key="canvasLocation" x="-61" y="99"/>
+        </scene>
+    </scenes>
+</document>
