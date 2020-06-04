@@ -8,6 +8,11 @@
 
 import UIKit
 
+struct Student {
+  var inAttendance = false
+  var name: String
+}
+
 class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSource,
 UIPickerViewDelegate, UIPickerViewDataSource{
   
@@ -23,6 +28,7 @@ UIPickerViewDelegate, UIPickerViewDataSource{
     super.viewDidLoad()
     // Do any additional setup after loading the view.
     notes = Note.getNotes()
+    var dumm = Student(
   }
 
   @IBAction func addTapped(_ sender: Any) {
@@ -59,20 +65,31 @@ UIPickerViewDelegate, UIPickerViewDataSource{
     let cell: NoteTableCell = tableNotes!.dequeueReusableCell(withIdentifier: "NoteCell", for: indexPath) as! NoteTableCell
     let note = notes[indexPath.row]
     cell.configure(icon: note.icon, text: note.text)
-    return cell
+    return cell	
   }
 }
 
 class NoteTableCell : UITableViewCell {
   
   @IBOutlet weak var imgNote: UIImageView!
-  @IBOutlet weak var lblNote: UILabel!
+  @IBOutlet weak var labelNote: UILabel!
   
   func configure(icon: String?, text: String?) {
     let unwIcon = icon ?? "sunrise.fill"
     let unwText = text ?? ""
     imgNote.image = UIImage(systemName: unwIcon)
-    lblNote.text = unwText
+    labelNote.text = unwText
+  }
+  
+}
+
+class TitleTableCell : UITableViewCell {
+  
+
+  @IBOutlet weak var lblTitle: UILabel!
+  
+  func configure(text: String?) {
+    let unwText = text ?? ""
   }
   
 }

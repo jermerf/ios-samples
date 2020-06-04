@@ -44,11 +44,22 @@ class UserDefaultsViewController: UIViewController {
   @IBOutlet weak var s4: UISwitch!
   @IBOutlet weak var s5: UISwitch!
   
-  
+  @IBOutlet weak var lblCoins: UILabel!
+ 
+  @IBOutlet weak var txtSetCoins: UITextField!
   @IBAction func switchAction(_ sender: Any) {
     saveDefaults()
   }
   
+  @IBAction func deleteSaveCoins(_ sender: Any) {
+    UserDefaults.standard.removeObject(forKey: "savedCoins")
+    loadDefaults()
+  }
+  
+  @IBAction func setCoinsTo(_ sender: Any) {
+    UserDefaults.standard.set(Int(txtSetCoins.text!), forKey: "savedCoins")
+    loadDefaults()
+  }
   func saveDefaults(){
     let u = UserDefaults.standard
     u.set(s1.isOn, forKey: "s1")
@@ -60,14 +71,24 @@ class UserDefaultsViewController: UIViewController {
   
   func loadDefaults(){
     let u = UserDefaults.standard
+    
     txtMyWords.text = u.string(forKey: "MyText")
     txtYourWords.text = u.string(forKey: "YourText")
     
     s1.isOn = u.bool(forKey: "s1")
     s2.isOn = u.bool(forKey: "s2")
     s3.isOn = u.bool(forKey: "s3")
-    s4.isOn = u.bool	`forKey: "s4")
+    s4.isOn = u.bool(forKey: "s4")
     s5.isOn = u.bool(forKey: "s5")
+    
+    var coins = 100 // Default
+    
+    if u.object(forKey: "savedCoins") != nil {
+      coins = u.integer(forKey: "savedCoins")
+    }
+    lblCoins.text = "Coins: \(coins)"
+    
+    
   }
   
 }
